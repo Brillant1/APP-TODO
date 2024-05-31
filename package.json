@@ -4,8 +4,9 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite --host",
+    "dev": "vite",
     "build": "vite build",
+    "serve": "serve -s dist -l 8090",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -18,6 +19,8 @@
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.0.4",
-    "vite": "^5.1.4"
+    "serve": "^14.2.3",
+    "vite": "^5.1.4",
+    "vite-plugin-pwa": "^0.20.0"
   }
 }
