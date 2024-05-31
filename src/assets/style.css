@@ -1,0 +1,230 @@
+
+@font-face {
+    font-family: "Montserrat-Bold";
+    src: url("../fonts/Montserrat-Bold.ttf");
+    display: swap;
+}
+
+@font-face {
+    font-family: "Montserrat-Light";
+    src: url("../fonts/Montserrat-Light.ttf");
+    display: swap;
+}
+
+@font-face {
+    font-family: "Montserrat-Medium";
+    src: url("../fonts/Montserrat-Medium.ttf");
+    display: swap;
+}
+
+@font-face {
+    font-family: "Montserrat-Regular";
+    src: url("../fonts/Montserrat-Regular.ttf");
+    display: swap;
+}
+
+@font-face {
+    font-family: "Montserrat-SemiBold";
+    src: url("../fonts/Montserrat-SemiBold.ttf");
+    display: swap;
+}
+
+
+body {
+    font-family: "Montserrat-Bold", sans-serif !important;
+    font-size: 16px;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    color: rgb(102, 101, 101);
+    background-color: #eee;
+}
+.font-regular {
+    font-family: "Montserrat-Regular";
+}
+
+.font-medium {
+    font-family: "Montserrat-Medium";
+}
+
+.font-light {
+    font-family: "Montserrat-Light";
+}
+
+.font-bold {
+    font-family: "Montserrat-Bold";
+}
+
+.font-semibold {
+    font-family: "Montserrat-SemiBold";
+}
+
+
+.fs-18{
+    font-size: 18px;
+}
+.fs-16{
+    font-size: 16px;
+}
+.fs-14{
+    font-size: 14px;
+}
+.fs-39{
+    font-size: 39px;
+}
+.fs-30{
+    font-size: 30px;
+}
+.fs-28{
+    font-size: 28px;
+}
+.fs-25{
+    font-size: 25px;
+}
+.fs-20{
+    font-size: 20px;
+}
+.fs-60{
+    font-size: 60px;
+}
+
+.fw-400{
+    font-weight: 400;
+}
+.fw-600{
+    font-weight: 600;
+}
+
+.t-dark{
+    color: rgb(102, 101, 101);
+}
+.t-red{
+    color: rgba(231, 130, 130, 1);
+}
+.bg-t-primary{
+    background: #16202B;
+}
+.t-primary{
+    color: #16202B;
+}
+.t-secondary{
+    color: #7451eb
+}
+.t-yellow{
+    color: rgba(217, 142, 49, 1);
+}
+.bg-t-green{
+    background: rgba(52, 96, 48, 1);
+}
+.bg-t-yellow{
+    background: rgba(217, 142, 49, 1);
+}
+
+
+/* Auth forms style code */
+
+.input-group,input[type="email"], input[type="password"]{
+    border: 1px solid #16202B;
+    border-radius: 8px;
+}
+.input-group{
+    border: 1px solid #16202B;
+}
+.input-group>input, .input-group-text {
+    color: white;
+}
+.input-group-text{
+    /* border-radius: 8px; */
+    background-color: #7451eb; 
+}
+input{
+    font-size: 14px;
+    border-radius: 8px;
+    padding-top: 12px !important;
+    padding-bottom: 12px !important;
+    color: #16202B !important;
+}
+input[type="email"]::placeholder, input[type="password"]::placeholder{
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20;
+    color: #16202B;
+}
+.btn-add{
+    border-radius: 8px;
+    padding:14px 16px;
+    font-weight: bold;
+    background-color: #7451eb;
+}
+.auth-form{
+    border-radius: 12px;
+    padding: 50px 20px;
+    background-color: #fff;
+}
+.p-20{
+    padding: 50px 20px;
+}
+
+.form-control:focus {
+    box-shadow: none;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s; /* Ajouter une transition pour désactiver l'autocomplétion dans Chrome */
+    background-color: none !important;
+    color: white !important;
+}
+.form-container, .todo-container{
+    width: 50%;
+}
+.input-group-text{
+    cursor: pointer;
+}
+.main-content-list-todo{
+    height: 60vh;
+}
+.todo-text{
+    font-size: 3.5em;
+}
+@media screen and (max-width:992px) {
+    .form-container,.todo-container{
+        width: 75%;
+    }
+    .main-content-list-todo{
+        height: 50vh;
+    }
+    .todo-text{
+        font-size: 2.5em;
+    }
+}
+@media screen and (max-width:768px) {
+    .form-container,.todo-container{
+        width: 100%;
+    }
+    .main-content-list-todo{
+        height: 48vh;
+    }
+    .todo-text{
+        font-size: 2em;
+    }
+}
+
+
+
+/* To do list style code */
+
+input[type="radio"] {
+    height:30px;
+    width:30px;
+}
+input[type="checkbox"]{
+    height:25px;
+    width:25px;
+    border-radius: 50%;
+}
+
+.main-content-list-todo{
+    overflow-y: scroll;
+}
