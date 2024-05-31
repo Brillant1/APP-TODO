@@ -98,9 +98,7 @@ body {
 .t-dark{
     color: rgb(102, 101, 101);
 }
-.t-red{
-    color: rgba(231, 130, 130, 1);
-}
+
 .bg-t-primary{
     background: #16202B;
 }
@@ -110,15 +108,11 @@ body {
 .t-secondary{
     color: #7451eb
 }
-.t-yellow{
-    color: rgba(217, 142, 49, 1);
-}
+
 .bg-t-green{
     background: rgba(52, 96, 48, 1);
 }
-.bg-t-yellow{
-    background: rgba(217, 142, 49, 1);
-}
+
 
 
 /* Auth forms style code */

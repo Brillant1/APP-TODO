@@ -39,7 +39,6 @@
         },
         mounted(){
             this.current_path = this.$route.name
-            console.log(this.current_path)
             this.getTodo()
         },
         methods: {
@@ -47,7 +46,6 @@
                 taskStore().setTasks()
                 let tasks = taskStore().getTasks
                 this.current_path=="all"?this.todos=tasks:this.todos = tasks.filter(t => t.status === this.current_path)
-                console.log(this.todos)
                 
                 this.$watch(() => taskStore().tasks, (newVal) => {
                     tasks = newVal
@@ -86,7 +84,6 @@
             '$route'(to, from) {
                 this.current_path = to.name;
                 this.getTodo()
-                console.log(this.current_path)
             }
         },
     }

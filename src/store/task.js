@@ -30,8 +30,19 @@ export const taskStore = defineStore('task', {
             useToast().error("Une erreur s'est produite")
         })
     },
+
+    storeTask(libelle){
+      this.$url.post('tasks', {libelle: libelle}).then(response =>{
+               
+          taskStore().setTasks()
+          response.data.status?useToast().success(response.data.message):useToast().error(response.data.message)
+      }).catch(error => {
+          useToast().error(error.data.message)
+         
+      })
+    },
     markTodoAsDone(id, status){
-        console.log(id, status)
+      
         axios.post('mark_todo_as_done', {
             id:id,
             status: status
@@ -39,12 +50,12 @@ export const taskStore = defineStore('task', {
             this.setTasks()
             useToast().success(response.data.message);
         }).catch(error =>{
-            console.log(error)
+           
         })
     },
     deleteTask(id){
         axios.delete('tasks/'+id).then(response => {
-            console.log(response)
+            
           const index = this.tasks.findIndex(element => element.id === id);
          
           if (index !== -1) {
@@ -53,7 +64,7 @@ export const taskStore = defineStore('task', {
             useToast().success(response.data.message)
           }
         }).catch(error => {
-          console.log(error)
+          
         })
     },
     deleteAllCompletedTask(){

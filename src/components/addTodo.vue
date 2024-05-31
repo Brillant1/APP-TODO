@@ -27,14 +27,8 @@ export default {
             if(this.libelle == ''){
                 useToast().error('Veuillez définir une tâche')
             }
-            this.$url.post('tasks', {libelle: this.libelle}).then(response =>{
-               
-                taskStore().setTasks()
-                response.data.status?useToast().success(response.data.message):useToast().error(response.data.message)
-            }).catch(error => {
-                useToast().error(error.data.message)
-                console.log(error)
-            })
+
+            taskStore().storeTask(this.libelle)
         }
     }
 }

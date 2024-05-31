@@ -29,15 +29,14 @@ const createAxiosInstance = (baseURL) => {
       return response;
     },
       function (error) {
-        // Des exemples d'interceptions de requêtes
+        // User is not authorize to access to resource
         if (error.response.status == 401) {
-          console.log("Vous n'avez pas les permissions requises");
           const store = authStore();
           store.logout();
 
           // useToast().error('Veuillez vous connecter pour continuer')
         } else if (error.response.status == 404) {
-          console.log("La ressource demandée n'a pas été trouvée");
+          // Resource not found
         }
         return Promise.reject(error);
       }
