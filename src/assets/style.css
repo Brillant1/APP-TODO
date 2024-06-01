@@ -121,9 +121,7 @@ body {
     border: 1px solid #7451eb;
     border-radius: 8px;
 }
-.input-group{
-    border: 1px solid #7451eb;
-}
+
 .input-group>input, .input-group-text {
     color: white;
 }
